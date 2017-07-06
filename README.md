@@ -1,4 +1,4 @@
-# node-crud
+# Node CRUD
 CRUD App with Node and MongoDB
 
 # What you will see here
