@@ -26,8 +26,8 @@ CRUD App with Node and MongoDB
 - Get the connection string and paste it on server.js file
 
 **Run:**
-- Start the server, run: **node server.js** (if you are developing, you can use nodemon instead to watch for file changes => 
-install nodemon, run: **npm install -g nodemon**)
+- Start the server, run: **node server.js** (if you are developing, you can use nodemon instead for watching file changes. 
+Install nodemon, run: **npm install -g nodemon**) and start the server, run: **nodemon server.js**
 - On your browser: **localhost:8989**
 
 
