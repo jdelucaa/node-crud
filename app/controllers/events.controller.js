@@ -1,3 +1,5 @@
+const Event = require('../models/event');
+
 module.exports = {
 
   // show all events
