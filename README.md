@@ -18,12 +18,15 @@ CRUD App with Node and MongoDB
 
 - Download and install NodeJS
 - Clone this repository
-- On root folder, run: **npm install**
+- In the root folder, run: **npm install**
 
 **For MongoDB**
 - Create an account on mlab.com
-- Create a database and a database user/pass
-- Get the connection string and paste it on server.js file
+- Create a database
+- Create a database user/pass
+- Get the connection string
+- Rename the .env.example file (located in the root folder) to .env
+- Paste mongodb connection string in .env file
 
 **Run:**
 - Start the server, run: **node server.js** (if you are developing, you can use nodemon instead for watching file changes. 

@@ -1,9 +1,12 @@
+// load environment variables
+require('dotenv').config();
+
 // grab our dependencies
 const express = require('express'),
-      app = express(),
-      port = process.env.PORT || 8989,
-      expressLayouts = require('express-ejs-layouts'),
-      mongoose = require('mongoose'); 
+  app = express(),
+  port = process.env.PORT || 8989,
+  expressLayouts = require('express-ejs-layouts'),
+  mongoose = require('mongoose');
 
 // configure our application =================================
 // tell express where to look for static assets
@@ -14,7 +17,7 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
 // connect to our database
-mongoose.connect('', {
+mongoose.connect(process.env.DB_URI, {
   useMongoClient: true
 });
 
