@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'),
 Schema = mongoose.Schema;
 
 // create a schema
@@ -17,7 +17,6 @@ eventSchema.pre('save', function (next) {
   this.slug = slugify(this.name);
   next();
 });
-
 
 // create the model
 const eventModel = mongoose.model('Event', eventSchema);
