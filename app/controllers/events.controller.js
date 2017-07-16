@@ -36,7 +36,13 @@ function showSingle(req, res) {
             res.status(404);
             res.send('Event not found!')
         }
-        res.render('pages/single', {event: event});
+
+
+
+        res.render('pages/single', {
+            event: event,
+            success: req.flash('success')
+        });
     });
 }
 
@@ -83,6 +89,9 @@ function processCreate(req, res) {
     event.save((err) => {
         if (err)
             throw err;
+
+        // set a successful flash message
+        req.flash('success', 'Successfuly created event!');
 
         // redirect to the newly created event
         res.redirect(`/events/${event.slug}`);

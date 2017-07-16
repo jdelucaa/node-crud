@@ -2,14 +2,27 @@
 require('dotenv').config();
 
 // grab our dependencies
-const express    = require('express'),
-    app            = express(),
-    port           = process.env.PORT || 8989,
+const express = require('express'),
+    app = express(),
+    port = process.env.PORT || 8989,
     expressLayouts = require('express-ejs-layouts'),
-    mongoose       = require('mongoose'),
-    bodyParser     = require('body-parser');
+    mongoose = require('mongoose'),
+    bodyParser = require('body-parser'),
+    session = require('express-session'),
+    cookieParser = require('cookie-parser'),
+    flash = require('connect-flash');
 
 // configure our application =================================
+// set sessions and cookie parser
+app.use(cookieParser());
+app.use(session({
+    secret: process.env.SECRET,
+    cookie: {maxAge: 60000},
+    resave: false, // forces the session to saved after the store
+    saveUninitialized: false // dont save unmodified sessions
+}));
+app.use(flash());
+
 // tell express where to look for static assets
 app.use(express.static(__dirname + '/public'));
 
