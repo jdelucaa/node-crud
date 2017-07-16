@@ -18,6 +18,8 @@ router.get('/events', eventsController.showEvents);
 router.get('/events/seed', eventsController.seedEvents);
 
 // create events
+router.get('/events/create', eventsController.showCreate);
+router.post('/events/create', eventsController.processCreate);
 
 // add events
 
