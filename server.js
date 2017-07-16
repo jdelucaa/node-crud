@@ -17,9 +17,7 @@ app.set('view engine', 'ejs');
 app.use(expressLayouts);
 
 // connect to our database
-mongoose.connect(process.env.DB_URI, {
-  useMongoClient: true
-});
+mongoose.connect(process.env.DB_URI);
 
 // set the routes ============================================
 app.use(require('./app/routes'));
