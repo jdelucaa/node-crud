@@ -1,20 +1,14 @@
 # Node CRUD
 CRUD App with Node and MongoDB
 
-# What you will see here
-
-* Handle CRUD in Node
-* How to use MongoDB in Node
-* Handle Node validation and messages
-
-# What is used here
+# Dependencies
 
 * Node
 * Express
 * MongoDB
 * Mongoose
 
-# Getting started
+# Getting started with this repo
 
 - Download and install NodeJS
 - Clone this repository
